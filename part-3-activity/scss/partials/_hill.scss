@@ -1,0 +1,37 @@
+.hill {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 100%;
+  height: 22%;
+  border-top-right-radius: 250%;
+  border-top-left-radius: 250%;
+  background-color: #adde60;
+  z-index:-1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -250px; 
+    width: 120%;
+    height: 110%;
+    border-top-right-radius: 85%;
+    border-top-left-radius: 0%;
+    background-color: #94c943;
+    transform:rotate(-12deg);
+    box-shadow:0 0 25px #cbf191 inset;
+  }
+  &::before {
+    background-color: #93cc3a;
+      border-top-left-radius: 0;
+      border-top-right-radius: 100%;
+      bottom: -20px;
+      content: "";
+      height: 110%;
+      left: -54px;
+      position: absolute;
+      transform: rotate(6deg);
+      width: 120%;
+  }  
+}

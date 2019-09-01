@@ -1,0 +1,206 @@
+@keyframes balloon {
+  0% {
+    bottom: 20%;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    bottom: 70%;
+    animation-timing-function: ease;
+  }
+}
+.balloon-container {
+  width: 120px;
+  height: 175px;
+  position: absolute;
+  left: 75%;
+}
+.balloon-container .balloon {
+  background-image: URL("../images/balloon.png");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@keyframes car-animation {
+  0% {
+    left: 0;
+  }
+  30%, 40% {
+    left: 20%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+.car {
+  height: 60px;
+  width: 200px;
+  position: absolute;
+  bottom: 80px;
+  left: 10%;
+  background-image: URL("../images/car.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 99;
+}
+.car:hover {
+  cursor: pointer;
+}
+.car .wheel {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  bottom: -9px;
+  background-image: URL("../images/wheel.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.car .wheel.back {
+  left: 28px;
+}
+.car .wheel.front {
+  left: 155px;
+}
+
+.hill {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 100%;
+  height: 22%;
+  border-top-right-radius: 250%;
+  border-top-left-radius: 250%;
+  background-color: #adde60;
+  z-index: -1;
+}
+.hill::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  right: -250px;
+  width: 120%;
+  height: 110%;
+  border-top-right-radius: 85%;
+  border-top-left-radius: 0%;
+  background-color: #94c943;
+  transform: rotate(-12deg);
+  box-shadow: 0 0 25px #cbf191 inset;
+}
+.hill::before {
+  background-color: #93cc3a;
+  border-top-left-radius: 0;
+  border-top-right-radius: 100%;
+  bottom: -20px;
+  content: "";
+  height: 110%;
+  left: -54px;
+  position: absolute;
+  transform: rotate(6deg);
+  width: 120%;
+}
+
+.road {
+  height: 100px;
+  position: absolute;
+  bottom: 30px;
+  background-color: grey;
+  padding: 0;
+  width: 100%;
+}
+.road::after {
+  position: relative;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 50px;
+  bottom: -100px;
+  background-color: #93CC3A;
+}
+.road .crossing {
+  position: absolute;
+  left: 450px;
+  height: 100%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  z-index: 1;
+}
+.road .crossing [class^=line] {
+  background-color: white;
+  height: 16px;
+  transform: skewX(-38deg);
+}
+.road .crossing .line-1 {
+  margin-left: 69px;
+  margin-right: 9px;
+}
+.road .crossing .line-2 {
+  margin-left: 46px;
+  margin-right: 26px;
+}
+.road .crossing .line-3 {
+  margin-left: 23px;
+  margin-right: 43px;
+}
+.road .crossing .line-4 {
+  margin-left: 0px;
+  margin-right: 60px;
+}
+
+@keyframes sun {
+  0% {
+    bottom: 40%;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    bottom: 70%;
+    animation-timing-function: ease;
+  }
+}
+.sun {
+  background: #ffe34b;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(253, 239, 39, 0.9);
+  position: absolute;
+  left: 20%;
+  bottom: 95%;
+  z-index: -2;
+  animation: sun 5s 0s linear alternate infinite;
+}
+
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #d1e4ea;
+  background: -moz-radial-gradient(center, ellipse cover, #d1e4ea 0%, #bae4f4 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #d1e4ea), color-stop(100%, #bae4f4));
+  background: -webkit-radial-gradient(center, ellipse cover, #d1e4ea 0%, #bae4f4 100%);
+  background: -o-radial-gradient(center, ellipse cover, #d1e4ea 0%, #bae4f4 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #d1e4ea 0%, #bae4f4 100%);
+  background: radial-gradient(ellipse at center, #d1e4ea 0%, #bae4f4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#d1e4ea", endColorstr="#bae4f4",GradientType=1 );
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */

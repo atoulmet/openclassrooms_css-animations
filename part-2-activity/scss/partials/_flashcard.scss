@@ -1,0 +1,134 @@
+@mixin vertical-centre-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+$card-dimension: 350px;
+
+.flashcard {
+	margin: 3rem auto 6rem;
+	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+
+	.btn {
+		text-align: center;
+		width: $card-dimension;
+		margin: 0 auto;
+		padding: 1rem 0;
+		margin-top: 1rem;
+		background-color: #7454ec;
+		border: 1px solid grey;
+		border-radius: 0.5rem;
+		color: white;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26),
+				0 10px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+		&:active {
+			box-shadow: 0 0 6px 5px rgba(116, 81, 235, 0.36);
+
+			& + .card {
+				.card__front {
+				}
+
+				.card__back {
+				}
+			}
+		}
+	}
+
+	.card {
+		margin: 0 auto;
+		position: relative;
+		text-align: center;
+		width: $card-dimension;
+		height: $card-dimension;
+
+		&__front {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			box-shadow: 0px 0px 12px 0px #d9d9d9;
+			border-radius: 0.5rem;
+			background-color: #04acfc;
+			@include vertical-centre-content;
+
+			h1 {
+				padding: 3rem;
+				color: white;
+				font-size: 2.5rem;
+				line-height: 1.5;
+			}
+		}
+
+		&__back {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 5px solid #544489;
+			box-sizing: border-box;
+			border-radius: 0.5rem;
+			background-color: white;
+			@include vertical-centre-content;
+
+			p {
+				padding: 3rem;
+				line-height: 1.2;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+.principal-1 {
+	.btn:active + .card > .card__front {
+		//         transform: rotate(-190deg) scale(0);
+		transition: 0.5s ease-in-out;
+	}
+}
+
+.principal-2 {
+	// Collez ici votre snippet de code
+}
+
+.principal-3 {
+	// Collez ici votre snippet de code
+}
+
+.principal-4 {
+	.btn:active + .card > .card__front {
+		transform: translate(300px);
+		transform: scale(0);
+		opacity: 0;
+		transition: all ease-in-out 0.3s;
+	}
+}
+
+.principal-6 {
+	.card > .card__front {
+		transform-origin: bottom right;
+	}
+	.btn:active + .card > .card__front {
+		background-color: #7454ec;
+		width: 50%;
+		height: 50%;
+		transform: rotate(90deg);
+		opacity: 0;
+		transition: all ease-in-out 0.5s;
+	}
+	.btn:active + .card > .card__front > h1 {
+		display: none;
+	}
+}
