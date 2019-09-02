@@ -1,4 +1,4 @@
-Vous trouverez ici les fichiers nécessaires pour l'activité de la partie 3 du cours Créez des animations CSS modernes sur [Open Classrooms](http://openclassrooms.com/).
+Vous trouverez ici les fichiers nécessaires pour l'activité de la partie 3 du cours Créez des animations CSS modernes sur [OpenClassrooms](http://openclassrooms.com/).
 
 Lorsque vous travaillerez sur cette activité, si vous voulez utiliser les fichiers sass plutôt que d'éditer le code css directement, il vous faudra [sass](https://sass-lang.com/) installé sur votre machine. Exécutez simplement 
 
