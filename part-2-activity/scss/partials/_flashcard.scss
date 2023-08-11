@@ -110,6 +110,11 @@ $card-dimension: 350px;
 
 .principal-3 {
 	// Collez ici votre snippet de code
+	.btn:active + .card > .card__front {
+		transform: scale(2);
+		opacity: 0;
+		transition: all ease-in-out 0.5s;
+	}
 }
 
 .principal-4 {
