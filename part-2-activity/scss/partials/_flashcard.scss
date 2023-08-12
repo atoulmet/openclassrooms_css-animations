@@ -35,13 +35,13 @@ $card-dimension: 350px;
 		&:active {
 			box-shadow: 0 0 6px 5px rgba(116, 81, 235, 0.36);
 
-			& + .card {
-				.card__front {
-				}
+			// & + .card {
+			// 	.card__front {
+			// 	}
 
-				.card__back {
-				}
-			}
+			// 	.card__back {
+			// 	}
+			// }
 		}
 	}
 
@@ -94,17 +94,27 @@ $card-dimension: 350px;
 
 .principal-1 {
 	.btn:active + .card > .card__front {
-		//         transform: rotate(-190deg) scale(0);
+		transform: rotate(-190deg) scale(0);
 		transition: 0.5s ease-in-out;
 	}
 }
 
 .principal-2 {
 	// Collez ici votre snippet de code
+	.btn:active + .card > .card__front {
+		opacity: 0;
+		transform: rotate(60deg) scale(0);
+		transition: 0.5s ease-in-out;
+	}
 }
 
 .principal-3 {
-	// Collez ici votre snippet de code
+	
+	.btn:active + .card > .card__front {
+		transform: scale(2);
+		opacity: 0;
+		transition: all ease-in-out 0.5s;
+	}
 }
 
 .principal-4 {
